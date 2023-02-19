@@ -1,19 +1,28 @@
 .stats {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
   justify-content: space-around;
   list-style: none;
-  padding: 5px;
+  padding: 0px 5px;
   margin: 0;
   background-color: #fff;
+  border: 1px solid #c4c4c4;
+
   border-radius: 5px;
 }
 
 .statEl {
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
+  width: 85px;
   gap: 8px;
 }
+
+.statEl:not(:last-child) {
+  border-right: 1px solid #c4c4c4;
+}
+
 .profile {
   background-color: rgb(234, 234, 234);
   padding: 20px;
@@ -49,4 +58,15 @@
 .location {
   margin-top: 5px;
   color: #525252;
+}
+
+.label {
+  color: #525252;
+  font-weight: 500;
+
+  font-size: 14px;
+}
+
+.quantity {
+  font-size: 20px;
 }
