@@ -3,6 +3,8 @@ import user from './Profile/user.json';
 import PropTypes from 'prop-types';
 import { Statistics } from './Statistics/Statistics';
 import data from './Statistics/data.json';
+import { FriendsList } from './FriendsList/FriendsList';
+import friends from './FriendsList/friends.json';
 
 export const App = () => {
   return (
@@ -31,6 +33,10 @@ export const App = () => {
 
       <div>
         <Statistics title="Upload stats" data={data} />
+      </div>
+
+      <div>
+        <FriendsList friends={friends} />
       </div>
     </div>
   );
