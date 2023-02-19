@@ -1,14 +1,15 @@
 import { StatisticsItem } from './StatisticsItem';
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 export function Statistics({ title = false, data }) {
   //   console.log(data);
   return (
-    <section className="statistics">
-      {title !== false ? <h2 className="title">{title}</h2> : null}
-      <ul className="stat-list">
+    <section className={css.statistics}>
+      {title !== false ? <h2 className={css.title}>{title}</h2> : null}
+      <ul className={css.statList}>
         {data.map(dataEl => (
-          <li key={dataEl.id} className="item">
+          <li key={dataEl.id} className={css.item}>
             <StatisticsItem dataEl={dataEl} />
           </li>
         ))}
@@ -25,3 +26,10 @@ Statistics.propTypes = {
     })
   ).isRequired,
 };
+
+// function setBg() {
+//   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+//   const itemEl = document.querySelector('.Statistics_item__Jx88-');
+//   itemEl.style.backgroundColor = '#' + randomColor;
+//   // color.innerHTML = '#' + randomColor;
+// }
