@@ -1,6 +1,5 @@
 import { Profile } from './Profile/Profile';
 import user from './Profile/user.json';
-import PropTypes from 'prop-types';
 import { Statistics } from './Statistics/Statistics';
 import data from './Statistics/data.json';
 import { FriendsList } from './FriendsList/FriendsList';
@@ -12,16 +11,17 @@ export const App = () => {
   return (
     <div
       style={{
-        marginTop: '100px',
-        marginBottom: '100px',
+        paddingTop: '100px',
+        paddingBottom: '100px',
         // height: '100vh',
         display: 'flex',
         gap: '50px',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 16,
         color: '#010101',
+        backgroundColor: '#f7f7f7',
       }}
     >
       <div>
@@ -52,13 +52,3 @@ export const App = () => {
 };
 
 // propTypes
-
-Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
-};
