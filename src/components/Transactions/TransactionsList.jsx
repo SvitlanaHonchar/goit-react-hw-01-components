@@ -1,22 +1,23 @@
 import { Transaction } from './Transaction';
 import PropTypes from 'prop-types';
+import { StyledHead, StyledRows } from './Transactions.styled';
 
 export function TransactionsList({ transactions }) {
   return (
     <table className="transaction-history">
-      <thead>
+      <StyledHead>
         <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
-      </thead>
+      </StyledHead>
 
       <tbody>
         {transactions.map(transaction => (
-          <tr key={transaction.id}>
+          <StyledRows key={transaction.id}>
             <Transaction transaction={transaction} />
-          </tr>
+          </StyledRows>
         ))}
       </tbody>
     </table>
