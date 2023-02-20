@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
+import { StyledSpan, StyledName } from './FriendsList.styled';
 
 export function Friend({ friend: { avatar, name, isOnline } }) {
   return (
     <>
-      <span className="status" status={isOnline.toString()}></span>
+      <StyledSpan
+        className={('status', isOnline ? 'green' : 'red')}
+      ></StyledSpan>
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <StyledName className="name">{name}</StyledName>
     </>
   );
 }
