@@ -2,11 +2,11 @@ import { StatisticsItem } from './StatisticsItem';
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
-export function Statistics({ title = false, data }) {
+export function Statistics({ title, data }) {
   //   console.log(data);
   return (
     <section className={css.statistics}>
-      {title !== false ? <h2 className={css.title}>{title}</h2> : null}
+      {title && <h2 className={css.title}>{title}</h2>}
       <ul className={css.statList}>
         {data.map(dataEl => (
           <li key={dataEl.id} className={css.item}>
